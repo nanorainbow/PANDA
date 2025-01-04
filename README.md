@@ -52,7 +52,7 @@ The dataset is provided as a single CSV file named `panda_dataset.csv`, consisti
 |--------------------------|--------------------------------------------------------------------------------|
 | `hatespeech`             | The input text being evaluated for hateful or problematic content.             |
 | `hateScore`              | Counterspeech: -1; Neutral or Ambiguous: 0; Hate Speech: 1                     |
-| `userEnteredResponse`    | The human entered response addressing the content of the `hatespeech`.      |
+| `userEnteredResponse`    | The human written or selected response addressing the content of the `hatespeech`.      |
 | `generatedResponse1`     | The first AI-generated response to the `hatespeech` text.                      |
 | `generatedResponse2`     | The second AI-generated response to the `hatespeech` text.                     |
 | `generatedResponse3`     | The third AI-generated response to the `hatespeech` text.                      |
@@ -61,6 +61,7 @@ The dataset is provided as a single CSV file named `panda_dataset.csv`, consisti
 
 Generated responses 1-4 are ordred by the JudgeLM score they recived from a round robin tournament comparing each AI generated answer.
 As such, `generatedResponse1` would be the most prefered AI answer by JudgeLM and `generatedResponse4` would be the least perfered of the 4.
+The `userEnteredResponse` was either written from scractch by a human, edited from an one of the previous AI responses, or was directly copied from an AI response.
 
 ---
 
